@@ -3,6 +3,8 @@
 ## About This Project
 
 MinifyURL is a URL shortening service built with AdonisJS, TypeScript, and MongoDB. It allows users to shorten long URLs, track analytics, and provides secure authentication through Google Sign-In. The application also features rate limiting, audience data logging, Redis caching for improved performance, and comprehensive error handling. 
+[API Documentation](https://k-b-yudheess-organization.gitbook.io/minifyurl)
+
 
 ### Key Features:
 - **User Authentication**: Implement user registration and login endpoints with Google Sign-In for secure sessions.
