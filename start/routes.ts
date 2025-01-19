@@ -15,8 +15,11 @@ import AnalyticsController from '#controllers/analytics_controller'
 import open from 'open'
 import { middleware } from './kernel.js'
 router.on('/').renderInertia('login')
+router.get('/login-web', async({ ally }) => {
+  const google=ally.use('google')
+  return google.stateless().redirect()
+})
 router.get('/login-redirect', async({ ally }) => {
-  console.log('yes')
   const google=ally.use('google')
   const redirectUrl = await google.stateless().getRedirectUrl();
   await open(redirectUrl);
