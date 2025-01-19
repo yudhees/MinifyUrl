@@ -6,6 +6,7 @@ COPY . ./
 RUN npm install
 RUN npm run build
 # COPY .env.production ./build/.env
+RUN apt-get update && apt-get install -y bash
 
 RUN mv ./build/* ./ && \
     rm -rf ./build && \
