@@ -7,6 +7,10 @@ RUN npm install
 RUN npm run build
 # COPY .env.production ./build/.env
 
+RUN mv ./build/* ./ && \
+    rm -rf ./build && \
+    rm -rf !(node_modules)
+
 RUN groupadd -g 10014 choreo && \
     useradd --no-create-home --uid 10014 --gid 10014 --system choreouser && \
     mkdir -p /home/choreouser/.npm/_logs && \
