@@ -19,11 +19,12 @@ router.get('/login-web', async({ ally }) => {
   const google=ally.use('google')
   return google.stateless().redirect()
 })
-router.get('/login-redirect', async({ ally }) => {
+router.get('/login-redirect', async({ ally,response }) => {
   const google=ally.use('google')
   const redirectUrl = await google.stateless().getRedirectUrl();
-  await open(redirectUrl);
-  // return google.stateless().redirect()
+  // response.redirect(redirectUrl);
+  await open(`xdg-open ${redirectUrl}`)
+  // await open(redirectUrl, {app:{name:'chrome'}});
 })
 router.get('/getAuthUser',[AuthController,'saveUserDets'])
 router.group(()=>{
