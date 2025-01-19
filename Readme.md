@@ -75,6 +75,9 @@ The application is Dockerized and deployed on a free hosting service. Detailed A
 ```bash
 git clone https://github.com/yudhees/MinifyUrl.git
 
-
+```
 2 .Navigate to the project directory:
+``` bash
 bash cd minifyurl
+
+```
