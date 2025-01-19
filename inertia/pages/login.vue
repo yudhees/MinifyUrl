@@ -12,6 +12,6 @@
 <script setup>
 import GoogleBtn from '~/components/GoogleBtn.vue'
 const openSignIn=()=>{
-   window.location.href='/login-redirect'
+   window.location.href='/login'
 }
 </script>
