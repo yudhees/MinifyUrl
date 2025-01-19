@@ -3,7 +3,7 @@ import axios from 'axios'
 const apiKey = env.get('IP_INFO_API_KEY')
 export class Geolocation {
   public static async getLocationByIp(ip: string) {
-    ip="152.58.199.95"
+    // ip="152.58.199.95"
     try {
       const response = await axios.get(`https://ipinfo.io/${ip}?token=${apiKey}`);
       const { country, region, city, loc } = response.data;
