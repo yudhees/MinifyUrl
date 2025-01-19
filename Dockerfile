@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . ./
 RUN npm install
-RUN npm build
+RUN npm run build
 # COPY .env.production ./build/.env
 
 RUN addgroup -g 10014 choreo && \
