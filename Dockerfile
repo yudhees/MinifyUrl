@@ -22,4 +22,4 @@ USER 10014
 
 EXPOSE 3333
 
-CMD ["node", "./build/bin/server.js"]
+CMD ["node", "./bin/server.js"]
