@@ -81,3 +81,13 @@ git clone https://github.com/yudhees/MinifyUrl.git
 bash cd minifyurl
 
 ```
+3 .Install dependencies:
+``` bash
+bash npm install
+
+```
+4 .Start the application:
+``` bash
+bash npm run dev
+
+```
