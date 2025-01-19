@@ -70,7 +70,7 @@ The application is Dockerized and deployed on a free hosting service. Detailed A
 
 ## How to Run Locally
 
-1. Clone the repository:
+1 .Clone the repository:
 
 ```bash
 git clone https://github.com/yudhees/MinifyUrl.git
