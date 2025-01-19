@@ -9,7 +9,7 @@ RUN npm run build
 
 RUN mv ./build/* ./ && \
     rm -rf ./build && \
-    rm -rf !(node_modules)
+    bash -c 'shopt -s extglob && rm -rf !(node_modules)'
 
 RUN groupadd -g 10014 choreo && \
     useradd --no-create-home --uid 10014 --gid 10014 --system choreouser && \
