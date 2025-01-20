@@ -43,5 +43,6 @@ export const http = defineConfig({
       return ip
     }
     return request.ips()[0]
-  }
+  },
+  trustProxy: ()=>true
 })
