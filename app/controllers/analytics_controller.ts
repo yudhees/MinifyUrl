@@ -74,7 +74,7 @@ export default class AnalyticsController {
       return response.status(500).send({ success: false, message: 'SomeThing Went Wrong Please Try Again' })
     }
   }
-  async setRedis(rediskey:string,result:any,expire:number=60){
+  async setRedis(rediskey:string,result:any,expire:number=30){
     await redis.set(rediskey,JSON.stringify(result))
     await redis.expire(rediskey,expire)
   }
