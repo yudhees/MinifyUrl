@@ -27,3 +27,7 @@ router.group(()=>{
    router.get('/analytics/topic/:topic',[AnalyticsController,'TopicAnalytics']);
 
 }).prefix('/api')
+
+router.get('/ips', async ({ request,response }) => {
+  return response.send({ips:request.ips()})
+})
