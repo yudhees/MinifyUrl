@@ -61,7 +61,7 @@ export default class ShortUrlsController {
       const shorUrl = await ShortUrls.findOne({ alias })
       if (!shorUrl)
         return response.status(419).send({ success: false, message: 'In valid Alias' })
-      const ip = request.ip(), userAgent = request.headers()['user-agent'] ?? ''
+      const ip = request.ips()?.[1]??request.ip(), userAgent = request.headers()['user-agent'] ?? ''
       const location = await Geolocation.getLocationByIp(ip)
       const {osName,deviceType} = Helpers.getUserAgentInfo(userAgent)
       const logData = {
