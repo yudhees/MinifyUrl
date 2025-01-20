@@ -29,5 +29,5 @@ router.group(()=>{
 }).prefix('/api')
 
 router.get('/ips', async ({ request,response }) => {
-  return response.send({headers:request.headers(),ips:request.ip()})
+  return response.send({headers:request.headers(),ips:request.ips()})
 })
