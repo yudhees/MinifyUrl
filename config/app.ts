@@ -37,4 +37,11 @@ export const http = defineConfig({
     secure: app.inProduction,
     sameSite: 'lax',
   },
+  getIp(request) {
+    const ip = request.header('X-Real-Ip')
+    if (ip) {
+      return ip
+    }
+    return request.ips()[0]
+  }
 })
