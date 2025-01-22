@@ -5,7 +5,7 @@ export default class Helpers {
   public static getUserAgentInfo(userAgent:string) {
     const {  device,os} = UAParser(userAgent);
     return {
-      osName:os.name,
+      osName:os.name??userAgent,
       deviceType:device.type??'web',
     };
   }
